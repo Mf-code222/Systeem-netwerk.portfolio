@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="IT portfolio van een self-hosted homelab: Proxmox, Linux, networking en cybersecurity." />
+    <title>Faye — IT Infrastructure Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="nav">
+      <a class="brand" href="#home" aria-label="Naar boven"><span class="brand-dot"></span>FAYE<span>/IT</span></a>
+      <nav aria-label="Hoofdnavigatie">
+        <a href="#lab">Homelab</a><a href="#projects">Projecten</a><a href="#skills">Skills</a>
+      </nav>
+      <a class="contact-link" href="mailto:hello@example.com">CONTACT <span>↗</span></a>
+    </header>
+
+    <main id="home">
+      <section class="hero wrap">
+        <div class="eyebrow"><span class="pulse"></span> OPEN TO IT OPPORTUNITIES</div>
+        <h1>Ik bouw systemen<br /><em>die blijven draaien.</em></h1>
+        <div class="hero-bottom">
+          <p>Praktische IT-infrastructuur, gebouwd vanuit nieuwsgierigheid. Van netwerkproblemen oplossen tot self-hosted services betrouwbaar uitrollen.</p>
+          <a class="scroll" href="#lab">ONTDEK HET LAB <span>↓</span></a>
+        </div>
+        <div class="hero-index">01 <span>/</span> 04</div>
+      </section>
+
+      <section class="signal-bar">
+        <div><span class="green"></span> SYSTEMS OPERATIONAL</div>
+        <div class="ticker">PROXMOX VE · DEBIAN · LINUX · NETWORKING · SELF-HOSTING · CYBERSECURITY ·</div>
+      </section>
+
+      <section id="lab" class="lab wrap section">
+        <div class="section-head"><div><span class="num">01</span><h2>Mijn homelab</h2></div><p>Een hands-on omgeving waarin ik echte infrastructuur ontwerp, beheer en verbeter.</p></div>
+        <div class="lab-grid">
+          <div class="topology" aria-label="Interactieve homelab architectuur">
+            <div class="topology-label">LIVE ARCHITECTURE <span>●</span></div>
+            <button class="node internet active" data-node="internet"><i>◎</i><strong>Internet</strong><small>WAN</small></button>
+            <span class="line l1"></span>
+            <button class="node router" data-node="router"><i>⌁</i><strong>Home Router</strong><small>LAN</small></button>
+            <span class="line l2"></span><span class="line l3"></span>
+            <button class="node pi" data-node="pi"><i>◈</i><strong>Raspberry Pi</strong><small>GATEWAY</small></button>
+            <button class="node hp" data-node="hp"><i>▣</i><strong>HP ProDesk G4</strong><small>PROXMOX VE</small></button>
+            <button class="node lenovo" data-node="lenovo"><i>▤</i><strong>Lenovo ThinkStation</strong><small>COMPUTE</small></button>
+            <span class="line l4"></span><span class="line l5"></span>
+            <button class="node vm" data-node="vm"><i>◇</i><strong>Debian VM</strong><small>MEDIA STACK</small></button>
+            <button class="node cloud" data-node="cloud"><i>☁</i><strong>Nextcloud + AI</strong><small>SELF-HOSTED</small></button>
+          </div>
+          <aside class="node-detail" id="node-detail" aria-live="polite">
+            <p class="detail-kicker">SELECTEER EEN NODE</p><div class="detail-icon">◎</div><h3>Internet</h3><p class="detail-copy">De externe verbinding met het homelab. Via een eigen netwerkopstelling wordt verkeer veilig en gecontroleerd naar de infrastructuur geleid.</p>
+            <div class="detail-tags"><span>WAN</span><span>NETWORK</span></div><div class="detail-footer"><span>STATUS</span><b><i></i> CONNECTED</b></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section">
+        <div class="wrap"><div class="section-head"><div><span class="num">02</span><h2>Wat ik bouw</h2></div><p>Technische projecten met een focus op betrouwbaarheid, isolatie en leren door te doen.</p></div>
+          <div class="cards">
+            <article class="project-card featured"><div class="card-top"><span>INFRASTRUCTURE</span><b>01</b></div><div class="server-art"><span></span><span></span><span></span></div><h3>Virtualisatie platform</h3><p>Een bare-metal Proxmox host met geïsoleerde Linux-omgevingen voor veilige experimenten en services.</p><div class="chips"><span>PROXMOX</span><span>DEBIAN</span><span>VMs</span></div><button class="learn" data-modal="proxmox">CASE STUDY <i>→</i></button></article>
+            <article class="project-card"><div class="card-top"><span>NETWORKING</span><b>02</b></div><div class="route-art"><span>INTERNET</span><i>→</i><span>PI</span><i>→</i><span>HOST</span></div><h3>Netwerk debugging</h3><p>Een Ethernet-probleem systematisch onderzocht en opgelost met een Raspberry Pi als router en gateway.</p><div class="chips"><span>ROUTING</span><span>NAT</span><span>TCP/IP</span></div><button class="learn" data-modal="network">CASE STUDY <i>→</i></button></article>
+            <article class="project-card"><div class="card-top"><span>SECURITY</span><b>03</b></div><div class="shield-art">⌬<small>PRIVATE<br />ACCESS</small></div><h3>Secure remote access</h3><p>Remote beheer van de Proxmox host via Tailscale, met VPN-verkeer bewust geïsoleerd binnen Debian.</p><div class="chips"><span>TAILSCALE</span><span>VPN</span><span>ISOLATION</span></div><button class="learn" data-modal="security">CASE STUDY <i>→</i></button></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills wrap section"><div class="section-head"><div><span class="num">03</span><h2>Technische stack</h2></div><p>Een groeiende set skills die ik inzet in echte, zelf beheerde omgevingen.</p></div>
+        <div class="skill-list">
+          <div><span>01</span><strong>Linux & System Administration</strong><em>Debian, services, CLI</em><b>ADVANCED</b></div>
+          <div><span>02</span><strong>Virtualization & Infrastructure</strong><em>Proxmox VE, VMs, storage</em><b>ADVANCED</b></div>
+          <div><span>03</span><strong>Networking</strong><em>IP, gateways, routing, NAT</em><b>HANDS-ON</b></div>
+          <div><span>04</span><strong>Self-hosting & Deployment</strong><em>Media stack, Nextcloud, AI</em><b>ACTIVE</b></div>
+          <div><span>05</span><strong>Cybersecurity</strong><em>Tailscale, VPN isolation</em><b>GROWING</b></div>
+        </div>
+      </section>
+
+      <section class="cta"><div class="wrap"><span class="num">04</span><h2>Let's build<br /><em>something useful.</em></h2><a href="mailto:hello@example.com">START A CONVERSATION <span>↗</span></a></div></section>
+    </main>
+    <footer class="wrap"><a class="brand" href="#home"><span class="brand-dot"></span>FAYE<span>/IT</span></a><p>© 2026 · BUILT WITH CURIOSITY</p><a href="#home">BACK TO TOP ↑</a></footer>
+    <dialog id="modal"><button class="close" aria-label="Sluiten">×</button><p class="detail-kicker">PROJECT BREAKDOWN</p><h2></h2><p class="modal-copy"></p><div class="modal-points"></div></dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
