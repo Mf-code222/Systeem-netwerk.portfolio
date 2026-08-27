@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="overrides.css" />
   </head>
   <body>
     <div class="noise"></div>
@@ -48,9 +49,10 @@
             <button class="node pi" data-node="pi"><i>◈</i><strong>Raspberry Pi</strong><small>GATEWAY</small></button>
             <button class="node hp" data-node="hp"><i>▣</i><strong>HP ProDesk G4</strong><small>PROXMOX VE</small></button>
             <button class="node lenovo" data-node="lenovo"><i>▤</i><strong>Lenovo ThinkStation</strong><small>COMPUTE</small></button>
-            <span class="line l4"></span><span class="line l5"></span>
+            <span class="line l4"></span><span class="line l5"></span><span class="line l6"></span>
+            <button class="node nextcloud" data-node="nextcloud"><i>☁</i><strong>Debian VM</strong><small>NEXTCLOUD · FILES</small></button>
             <button class="node vm" data-node="vm"><i>◇</i><strong>Debian VM</strong><small>MEDIA STACK</small></button>
-            <button class="node cloud" data-node="cloud"><i>☁</i><strong>Nextcloud + AI</strong><small>SELF-HOSTED</small></button>
+            <button class="node cloud" data-node="cloud"><i>☁</i><strong>Ollama + Nginx</strong><small>VM · SELF-HOSTED</small></button>
           </div>
           <aside class="node-detail" id="node-detail" aria-live="polite">
             <p class="detail-kicker">SELECTEER EEN NODE</p><div class="detail-icon">◎</div><h3>Internet</h3><p class="detail-copy">De externe verbinding met het homelab. Via een eigen netwerkopstelling wordt verkeer veilig en gecontroleerd naar de infrastructuur geleid.</p>
@@ -64,7 +66,9 @@
           <div class="cards">
             <article class="project-card featured"><div class="card-top"><span>INFRASTRUCTURE</span><b>01</b></div><div class="server-art"><span></span><span></span><span></span></div><h3>Virtualisatie platform</h3><p>Een bare-metal Proxmox host met geïsoleerde Linux-omgevingen voor veilige experimenten en services.</p><div class="chips"><span>PROXMOX</span><span>DEBIAN</span><span>VMs</span></div><button class="learn" data-modal="proxmox">CASE STUDY <i>→</i></button></article>
             <article class="project-card"><div class="card-top"><span>NETWORKING</span><b>02</b></div><div class="route-art"><span>INTERNET</span><i>→</i><span>PI</span><i>→</i><span>HOST</span></div><h3>Netwerk debugging</h3><p>Een Ethernet-probleem systematisch onderzocht en opgelost met een Raspberry Pi als router en gateway.</p><div class="chips"><span>ROUTING</span><span>NAT</span><span>TCP/IP</span></div><button class="learn" data-modal="network">CASE STUDY <i>→</i></button></article>
-            <article class="project-card"><div class="card-top"><span>SECURITY</span><b>03</b></div><div class="shield-art">⌬<small>PRIVATE<br />ACCESS</small></div><h3>Secure remote access</h3><p>Remote beheer van de Proxmox host via Tailscale, met VPN-verkeer bewust geïsoleerd binnen Debian.</p><div class="chips"><span>TAILSCALE</span><span>VPN</span><span>ISOLATION</span></div><button class="learn" data-modal="security">CASE STUDY <i>→</i></button></article>
+            <article class="project-card"><div class="card-top"><span>SECURITY</span><b>03</b></div><div class="shield-art">⌬<small>PRIVATE<br />ACCESS</small></div><h3>Secure remote access</h3><p>Ollama en Nginx draaien via Docker in een VM en zijn overal privé bereikbaar via Tailscale.</p><div class="chips"><span>TAILSCALE</span><span>DOCKER</span><span>OLLAMA</span></div><button class="learn" data-modal="security">CASE STUDY <i>→</i></button></article>
+            <article class="project-card"><div class="card-top"><span>SELF-HOSTED AI</span><b>04</b></div><div class="route-art"><span>OLLAMA</span><i>→</i><span>NGINX</span><i>→</i><span>TAILSCALE</span></div><h3>Private AI server</h3><p>Een lokale AI- en webserver in een VM, gedeployed met Docker en privé bereikbaar vanaf elk apparaat.</p><div class="chips"><span>OLLAMA</span><span>NGINX</span><span>DOCKER</span></div><button class="learn" data-modal="ai">CASE STUDY <i>→</i></button></article>
+            <article class="project-card"><div class="card-top"><span>PERSONAL CLOUD</span><b>05</b></div><div class="route-art"><span>DEBIAN VM</span><i>→</i><span>NEXTCLOUD</span><i>→</i><span>FILES</span></div><h3>Eigen cloud & fileserver</h3><p>Een dedicated Debian VM die Nextcloud draait als persoonlijke cloudopslag en fileserver.</p><div class="chips"><span>NEXTCLOUD</span><span>DEBIAN</span><span>SELF-HOSTED</span></div><button class="learn" data-modal="nextcloud">CASE STUDY <i>→</i></button></article>
           </div>
         </div>
       </section>
@@ -74,12 +78,12 @@
           <div><span>01</span><strong>Linux & System Administration</strong><em>Debian, services, CLI</em><b>ADVANCED</b></div>
           <div><span>02</span><strong>Virtualization & Infrastructure</strong><em>Proxmox VE, VMs, storage</em><b>ADVANCED</b></div>
           <div><span>03</span><strong>Networking</strong><em>IP, gateways, routing, NAT</em><b>HANDS-ON</b></div>
-          <div><span>04</span><strong>Self-hosting & Deployment</strong><em>Media stack, Nextcloud, AI</em><b>ACTIVE</b></div>
+          <div><span>04</span><strong>Self-hosting & Deployment</strong><em>Docker, Nginx, Ollama, AI</em><b>ACTIVE</b></div>
           <div><span>05</span><strong>Cybersecurity</strong><em>Tailscale, VPN isolation</em><b>GROWING</b></div>
         </div>
       </section>
 
-      <section class="cta"><div class="wrap"><span class="num">04</span><h2>Let's build<br /><em>something useful.</em></h2><a href="mailto:hello@example.com">START A CONVERSATION <span>↗</span></a></div></section>
+      <section class="cta"><div class="wrap"><span class="num">04</span><h2>Let's build<br /><em>something useful.</em></h2><a href="mailto:faye.mouhamed2002@outlook.com">START A CONVERSATION <span>↗</span></a></div></section>
     </main>
     <footer class="wrap"><a class="brand" href="#home"><span class="brand-dot"></span>FAYE<span>/IT</span></a><p>© 2026 · BUILT WITH CURIOSITY</p><a href="#home">BACK TO TOP ↑</a></footer>
     <dialog id="modal"><button class="close" aria-label="Sluiten">×</button><p class="detail-kicker">PROJECT BREAKDOWN</p><h2></h2><p class="modal-copy"></p><div class="modal-points"></div></dialog>
